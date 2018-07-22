@@ -1,6 +1,6 @@
-Kotlin TornadoFx (JavaFx) Demo
-===============================
+TornadoFx Border Style Demo
+===========================
 
-A simple "Hello world" demo for TornadoFX.
+How to set border's style of some component.
 
 Run `Hello.kt` from your IDE.
