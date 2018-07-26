@@ -1,14 +1,27 @@
 package example
 
-import javafx.geometry.Insets
-import javafx.geometry.Pos
 import javafx.scene.paint.Color
 import tornadofx.*
 
 class HelloWorld : View() {
-    override val root = hbox {
-        addClass(HelloWorldStyle.myBorder)
-        label("Hello world!")
+    override val root = vbox {
+        hbox {
+            addClass(HelloWorldStyle.myBorder)
+            label("border set by type-safe css")
+        }
+        hbox {
+            style = """
+                -fx-border-color: blue;
+                -fx-border-width: 4;
+                -fx-padding: 10px;
+            """
+            label("border set by style")
+        }
+        hbox {
+            stylesheets.add("hello.css")
+            addClass("mypane")
+            label("border set type css file")
+        }
     }
 }
 
@@ -21,8 +34,6 @@ class HelloWorldStyle : Stylesheet() {
         root {
             prefWidth = 400.px
             prefHeight = 400.px
-            alignment = Pos.CENTER
-            fontSize = 50.px
         }
 
         myBorder {

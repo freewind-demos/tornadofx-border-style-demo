@@ -1,0 +1,7 @@
+.mypane {
+    -fx-width: 30px;
+    -fx-height: 30px;
+    -fx-border-color: yellow;
+    -fx-border-width: 6;
+    -fx-padding: 10px;
+}
